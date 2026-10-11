@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priya Store - Products</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 30px;
+            background: #f4f7fb;
+            color: #1f2937;
+        }
+        header {
+            background: #172554;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 25px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 200px;
+            box-shadow: 0 3px 10px #00000012;
+        }
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 10px 14px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Priya Store</h1>
+        <p>Product Catalog</p>
+        <p>Cart items: <span id="cart">0</span></p>
+    </header>
+
+    <div class="products">
+        <div class="card">
+            <h3>Laptop</h3>
+            <p>Price: ₹45,000</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <h3>Headphones</h3>
+            <p>Price: ₹2,000</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <h3>Keyboard</h3>
+            <p>Price: ₹1,500</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+
+    <script>
+        let cartCount = 0;
+
+        function addToCart() {
+            cartCount++;
+            document.getElementById("cart").textContent = cartCount;
+        }
+    </script>
+</body>
+</html>
