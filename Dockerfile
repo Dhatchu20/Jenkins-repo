@@ -1,6 +1,7 @@
 
 FROM nginx:alpine
 
-COPY index.html /usr/share/nginx/html/index.html
+ARG PAGE=index.html
+COPY ${PAGE} /usr/share/nginx/html/index.html
 
 EXPOSE 80
