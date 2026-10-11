@@ -1,12 +1,12 @@
 
 services:
   frontend1:
-    build: ./frontend1
+    build: ./f1
     ports:
       - "8081:80"
 
   frontend2:
-    build: ./frontend2
+    build: ./f2
     ports:
       - "8082:80"
 
@@ -19,4 +19,3 @@ services:
     build: ./order-service
     ports:
       - "8084:5000"
-
