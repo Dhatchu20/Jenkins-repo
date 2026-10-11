@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priya Store - Order Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 30px;
+            background: #f4f7fb;
+            color: #1f2937;
+        }
+        header {
+            background: #172554;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px #00000012;
+        }
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 10px 14px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Priya Store</h1>
+        <p>Order Management</p>
+    </header>
+
+    <div class="card">
+        <h3>Order #1001</h3>
+        <p>Product: Laptop</p>
+        <p>Quantity: 1</p>
+        <p>Status: Shipped</p>
+    </div>
+
+    <div class="card">
+        <h3>Order #1002</h3>
+        <p>Product: Headphones</p>
+        <p>Quantity: 2</p>
+        <p>Status: Processing</p>
+    </div>
+
+    <button onclick="refreshOrders()">Refresh Orders</button>
+    <p id="message"></p>
+
+    <script>
+        function refreshOrders() {
+            document.getElementById("message").textContent =
+                "Sample orders refreshed successfully.";
+        }
+    </script>
+</body>
+</html>
