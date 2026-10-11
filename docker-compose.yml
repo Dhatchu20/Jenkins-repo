@@ -1,22 +1,37 @@
 
 services:
   frontend1:
-    build: .
-    image: jenkins-demo:latest
+    build:
+      context: .
+      args:
+        PAGE: frontend1.html
+    image: frontend1:latest
     ports:
       - "8081:80"
 
   frontend2:
-    image: jenkins-demo:latest
+    build:
+      context: .
+      args:
+        PAGE: frontend2.html
+    image: frontend2:latest
     ports:
       - "8082:80"
 
   backend1:
-    image: jenkins-demo:latest
+    build:
+      context: .
+      args:
+        PAGE: backend1.html
+    image: backend1:latest
     ports:
       - "8083:80"
 
   backend2:
-    image: jenkins-demo:latest
+    build:
+      context: .
+      args:
+        PAGE: backend2.html
+    image: backend2:latest
     ports:
       - "8084:80"
