@@ -1,11 +1,94 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Frontend 1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priya Store | Products</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            color: #222;
+        }
+        header {
+            background: #172554;
+            color: white;
+            padding: 22px 8%;
+        }
+        header h1 { margin: 0; }
+        main { padding: 35px 8%; }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 22px;
+        }
+        .card {
+            background: white;
+            padding: 22px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px #00000012;
+        }
+        .product-icon { font-size: 55px; }
+        .price { color: #087443; font-size: 20px; font-weight: bold; }
+        button {
+            background: #2563eb;
+            color: white;
+            border: 0;
+            padding: 11px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        #message { font-weight: bold; }
+    </style>
 </head>
 <body>
-    <h1>Welcome to Frontend 1</h1>
-    <p>This is my first frontend application.</p>
+    <header>
+        <h1>Priya Store</h1>
+        <p>Everyday technology, all in one place</p>
+    </header>
+
+    <main>
+        <h2>Our Products</h2>
+        <p>Choose a product to add it to your cart.</p>
+        <p id="message">Cart items: 0</p>
+
+        <section class="products">
+            <article class="card">
+                <div class="product-icon">💻</div>
+                <h3>Laptop</h3>
+                <p>Reliable laptop for work and study.</p>
+                <p class="price">₹45,000</p>
+                <button onclick="addToCart('Laptop')">Add to Cart</button>
+            </article>
+
+            <article class="card">
+                <div class="product-icon">🎧</div>
+                <h3>Headphones</h3>
+                <p>Enjoy music with clear sound.</p>
+                <p class="price">₹2,000</p>
+                <button onclick="addToCart('Headphones')">Add to Cart</button>
+            </article>
+
+            <article class="card">
+                <div class="product-icon">⌨️</div>
+                <h3>Keyboard</h3>
+                <p>A comfortable keyboard for everyday use.</p>
+                <p class="price">₹1,500</p>
+                <button onclick="addToCart('Keyboard')">Add to Cart</button>
+            </article>
+        </section>
+    </main>
+
+    <script>
+        let cartCount = 0;
+
+        function addToCart(product) {
+            cartCount++;
+            document.getElementById("message").textContent =
+                "Cart items: " + cartCount + " — Added " + product;
+        }
+    </script>
 </body>
 </html>
